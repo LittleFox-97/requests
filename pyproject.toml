@@ -1,10 +1,59 @@
-[tool.isort]
-profile = "black"
-src_paths = ["src/requests", "test"]
-honor_noqa = true
+[build-system]
+requires=["setuptools", "wheel"]
+build-backend="setuptools.build_meta"
 
-[tool.pytest.ini_options]
-addopts = "--doctest-modules"
-doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS"
-minversion = "6.2"
-testpaths = ["tests"]
+[project]
+name="requests"
+description="Python HTTP for Humans."
+dynamic=["version"]
+authors=[{ name="Kenneth Reitz", email="me@kennethreitz.org" }]
+readme="README.md"
+license="Apache-2.0"
+classifiers=[
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries",
+]
+requires-python=">=3.8"
+
+[tool.ruff]
+line-length=80
+target-version="py313"
+
+[tool.ruff.lint]
+select=["ALL"]
+ignore = ["CPY001", "PLR2004"]
+preview = true
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 100
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+docstring-code-format=true
+docstring-code-line-length=20
+preview = true
+
+[tool.mypy]
+platform = "win32"
+python_version = "3.13"
+strict = true
+color_output = true

@@ -35,3 +35,6 @@ t2.py
 dist
 
 /.mypy_cache/
+Pipfile.lock
+Pipfile
+.env

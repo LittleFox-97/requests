@@ -1,13 +1,6 @@
-#   __
-#  /__)  _  _     _   _ _/   _
-# / (   (- (/ (/ (- _)  /  _)
-#          /
-
 """
-Requests HTTP Library
-~~~~~~~~~~~~~~~~~~~~~
-
 Requests is an HTTP library, written in Python, for human beings.
+
 Basic GET usage:
 
    >>> import requests
