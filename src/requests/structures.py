@@ -1,9 +1,4 @@
-"""
-requests.structures
-~~~~~~~~~~~~~~~~~~~
-
-Data structures that power Requests.
-"""
+'''Data structures that power Requests.'''
 
 from collections import OrderedDict
 
