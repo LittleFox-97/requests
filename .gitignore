@@ -35,3 +35,8 @@ t2.py
 dist
 
 /.mypy_cache/
+.qodo
+Pipfile.lock
+.gitignore
+.env
+Pipfile
