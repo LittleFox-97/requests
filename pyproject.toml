@@ -16,7 +16,7 @@ extend-include = ["*.pyw"]
 indent-width = 2
 target-version = "py313"
 select = ["ALL"]
-ignore = ['CPY001', 'PLR2004', 'RUF','D300']
+ignore = ['CPY001', 'PLR2004', 'RUF','D300', 'FBT']
 preview = true
 task-tags = ["TODO", "FIXME"]
 
