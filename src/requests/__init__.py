@@ -34,10 +34,10 @@ is at <https://requests.readthedocs.io>.
 import contextlib
 import logging
 import warnings
+from importlib.metadata import version
 from logging import NullHandler
 
 import charset_normalizer
-import urllib3
 from urllib3.exceptions import DependencyWarning
 
 from . import packages, utils
@@ -125,7 +125,7 @@ def _check_cryptography(cryptography_ver: str) -> None:
         warnings.warn(warning, RequestsDependencyWarning, stacklevel=2)
 
 
-urllib3_version = urllib3._version.__version__  # noqa: SLF001
+urllib3_version = version('urllib3')
 # Check imported dependencies for compatibility.
 try:
     check_compatibility(
