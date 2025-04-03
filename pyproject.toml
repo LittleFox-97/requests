@@ -1,7 +1,54 @@
-[tool.isort]
-profile = "black"
-src_paths = ["src/requests", "test"]
-honor_noqa = true
+[project]
+name = "requests"
+description = "Python HTTP for Humans."
+readme = "README.md"
+requires-python = ">=3.13"
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+exclude = [".venv"]
+line-length = 120
+extend-include = ["*.pyw"]
+indent-width = 4
+target-version = "py313"
+select = ["ALL"]
+ignore = ['CPY001', 'PLR2004', 'RUF','D300']
+preview = true
+task-tags = ["TODO", "FIXME"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+docstring-quotes = "single"
+multiline-quotes = "single"
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = 140
+preview = true
+skip-magic-trailing-comma = true
+
+[tool.mypy]
+python_version = "3.13"
+platform = "win32"
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+show_error_codes = true
+
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules"

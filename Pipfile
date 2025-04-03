@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+urllib3 = "*"
+charset-normalizer = "*"
+certifi = "*"
+ruff = "*"
+
+[dev-packages]
+setuptools = "*"
+ruff = "*"
+mypy = "*"
+chardet = "*"
+cryptography = "*"
+types-setuptools = "*"
+simplejson = "*"
+types-simplejson = "*"
+
+[requires]
+python_version = "3.13"
+python_full_version = "3.13.2"
